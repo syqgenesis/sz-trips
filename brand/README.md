@@ -35,6 +35,8 @@ Each mark comes in ink (`*.svg`) and parchment for dark backgrounds (`*-reverse.
 | Ivory | `#F6F1E7` | Lighter paper stock, seal backgrounds |
 | Graphite | `#262521` | Dark surfaces |
 
+Navy palettes under consideration (Two Bays, Celadon, Fog & Brass) are compared in [palette-options.png](palette-options.png). The table above stays in force until one is chosen.
+
 Use one ink colour per application. If you print on textured cream stock, print in ink (or a single black Pantone) and let the paper supply the parchment.
 
 ## Type
