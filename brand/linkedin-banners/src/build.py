@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from brand import IVORY, NAVY  # noqa: E402
 from canvas import Canvas, f, horizontal, place, stacked  # noqa: E402
 import pacific  # noqa: E402
+import photos  # noqa: E402
 import skyline as sk  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -358,11 +359,30 @@ def twin_skylines(c, fmt, mood):
     stacked(c, 0.5 * W, 0.45 * H, K_STACK[fmt], FULL_STACK if fmt == "profile" else COMPANY_STACK)
 
 
+def photo_skylines(c, fmt, mood, left, right):
+    """Real photos: San Francisco cross-fading into Shenzhen, lockup over a darkened centre."""
+    W, H = c.W, c.H
+    credits = photos.panorama(c, left, right, mood=mood)
+    # Brand grade: deepen the top and the water, and open a calm navy field for the type.
+    c.rect(c.lin(0, 0, 0, H, [(0, NAVY, 0.62), (0.42, NAVY, 0.12), (0.72, NAVY, 0.05), (1, NAVY, 0.55)]))
+    c.rect(c.lin(0, 0, W, 0, [(0.16, NAVY, 0), (0.36, NAVY, 0.72), (0.5, NAVY, 0.82),
+                              (0.64, NAVY, 0.72), (0.84, NAVY, 0)]))
+    halo(c, 0.5 * W, 0.47 * H, 0.17 * W, 0.44 * H, NAVY, 0.45)
+    stacked(c, 0.5 * W, 0.47 * H, K_STACK[fmt], FULL_STACK if fmt == "profile" else COMPANY_STACK)
+    return "Photos: " + "; ".join(credits)
+
+
 def d01_skylines_night(c, fmt):
+    have = photos.catalogue()
+    if {"sf-night", "sz-night"} <= have.keys():
+        return photo_skylines(c, fmt, "night", "sf-night", "sz-night")
     twin_skylines(c, fmt, "night")
 
 
 def d08_skylines_dusk(c, fmt):
+    have = photos.catalogue()
+    if {"sf-dusk", "sz-dusk"} <= have.keys():
+        return photo_skylines(c, fmt, "dusk", "sf-dusk", "sz-dusk")
     twin_skylines(c, fmt, "dusk")
 
 
@@ -389,9 +409,9 @@ def main(only=None):
                 continue
             random.seed(name)
             c = Canvas(w, h)
-            fn(c, fmt)
+            desc = fn(c, fmt) or ""
             title = f"Delta & Bay Founders Club, LinkedIn {fmt} banner {name[:2]}"
-            (out / f"{name}.svg").write_text(c.svg(title))
+            (out / f"{name}.svg").write_text(c.svg(title, desc))
             print(f"svg/{fmt}/{name}.svg")
 
 

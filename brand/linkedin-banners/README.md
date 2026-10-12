@@ -30,10 +30,14 @@ Palette: navy `#050A30` and ivory `#ECE8E0` from the logo, plus electric blues f
 ## Rebuild
 
 ```sh
-pip install shapely pillow             # shapely for the map, pillow for previews
+pip install shapely pillow numpy       # shapely for the map, pillow/numpy for photos and previews
 python3 src/build.py                   # svg/
 node src/render.mjs                    # png/ (needs Playwright + Chromium)
 python3 src/preview.py                 # preview/
 ```
+
+### Real city photos for 01 and 08
+
+Put the photos in `photos/` and list them in `photos/photos.json` under the keys `sf-night` and `sz-night` (design 01) or `sf-dusk` and `sz-dusk` (design 08). The format is documented at the top of `src/photos.py`. The build crops each photo to its half of the banner, grades it toward the brand navy, cross-fades San Francisco into Shenzhen, and embeds the result. The logo and type stay vector on top. Credits go into each SVG's `<desc>`. Without photos, 01 and 08 fall back to the illustrated skylines.
 
 To update the logo, replace `logo/delta-and-bay-logo.svg` (keep the path `id`s) and rebuild. `src/build.py` holds one function per design. Layout values are fractions of the banner width/height, so both formats come from the same code. The map uses `data/pacific.json`, a trimmed cut of Natural Earth (public domain) made by `src/prepare_map_data.py`.

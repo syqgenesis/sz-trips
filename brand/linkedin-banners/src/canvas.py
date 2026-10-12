@@ -96,7 +96,8 @@ class Canvas:
 
     def svg(self, title, desc=""):
         clip = self.uid("canvas")
-        return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.W}" height="{self.H}" '
+        xlink = ' xmlns:xlink="http://www.w3.org/1999/xlink"' if any("xlink:" in b for b in self.body) else ""
+        return (f'<svg xmlns="http://www.w3.org/2000/svg"{xlink} width="{self.W}" height="{self.H}" '
                 f'viewBox="0 0 {self.W} {self.H}">\n<title>{escape(title)}</title>\n'
                 + (f"<desc>{escape(desc)}</desc>\n" if desc else "")
                 + f'<defs><clipPath id="{clip}"><rect width="{self.W}" height="{self.H}"/></clipPath>\n'
