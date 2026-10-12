@@ -1,72 +1,67 @@
 # Delta & Bay Founders Club: brand
 
-The logo is the curved "crescent + B" monogram from concept 2 (`concepts/identity-concept.webp`), set on Prussian blue from concept 1 (`concepts/colour-concept.webp`).
+The logo has two parts:
+- **Monogram:** the curved "crescent + B" from concept 2 (`concepts/identity-concept.webp`).
+- **Lettering:** "DELTA & BAY" and "FOUNDERS CLUB" in Montserrat.
+
+It sits on Prussian blue with the edge glow from concept 1 (`concepts/colour-concept.webp`).
 
 ![Delta & Bay logo](logo/png/delta-and-bay-logo.png)
 
 ## Files
 
-All SVGs are pure vector outlines: no fonts, no embedded images. They scale to any size and open in Figma, Illustrator, Canva or a browser. The PNGs are 2048 × 2048 renders of the same files.
+All SVGs are pure vector outlines: no fonts, no embedded images. They scale to any size and open in Figma, Illustrator, Canva or a browser. Every SVG has a matching 2048 px wide PNG in `logo/png/`.
 
-| File (`logo/svg/`, same name in `logo/png/`) | Use it for |
+| File (`logo/svg/`) | Use it for |
 |---|---|
-| `delta-and-bay-logo.svg` | Full lockup on Prussian blue: monogram, name, tagline and cities. Decks, cover slides, social posts. |
-| `delta-and-bay-logo-compact.svg` | Monogram, name and "Founders Club" on Prussian blue. Headers, email signatures, documents. |
-| `delta-and-bay-monogram.svg` | Monogram only on Prussian blue. Profile pictures, favicons, app icons, stamps. |
-| `*-ivory-transparent.svg` | Ivory artwork with no background, for photos or other dark backgrounds. |
-| `*-prussian-transparent.svg` | Prussian blue artwork with no background, for white or light backgrounds. |
+| `delta-and-bay-logo.svg` | **Main logo.** Monogram and name on Prussian blue with the edge glow (square). Social posts, cover slides, profile banners. |
+| `delta-and-bay-logo-flat.svg` | The same on plain Prussian blue, for print or anywhere the glow is too busy. |
+| `delta-and-bay-logo-ivory-transparent.svg` | Ivory logo, tightly cropped, no background. Use it on photos, the website header or dark slides. |
+| `delta-and-bay-logo-prussian-transparent.svg` | Prussian blue logo, tightly cropped, no background. Use it on white or light backgrounds. |
+| `delta-and-bay-monogram.svg` | Monogram only, on the edge glow (square). Profile pictures, app icons, favicons. |
+| `delta-and-bay-monogram-flat.svg` | Monogram on plain Prussian blue. |
+| `delta-and-bay-monogram-*-transparent.svg` | Monogram only, tightly cropped, in ivory or Prussian blue. |
+
+`backgrounds/` holds the edge glow on its own, for slides and the website: `edge-glow-16x9.svg` (1920 × 1080) and `edge-glow-square.svg`.
+
+**Minimum size:** below about 200 px wide, "FOUNDERS CLUB" gets too thin to read. Use the monogram on its own there, for example in avatars and favicons.
 
 ## Colours
 
-| | Hex | RGB |
+| | Hex | Where |
 |---|---|---|
-| Prussian blue (background) | `#050A30` | 5, 10, 48 |
-| Ivory (logo) | `#ECE8E0` | 236, 232, 224 |
+| Prussian blue | `#050A30` | Background |
+| Ivory | `#ECE8E0` | Logo and text on dark backgrounds |
+| Glow blue | `#0035B1` | Brightest point of the edge glow (top-right corner) |
 
-Ivory is the logo colour sampled from concept 2. For pure white instead, change `fill="#ECE8E0"` to `fill="#FFFFFF"` in the SVG.
+To use pure white instead of ivory, change `fill="#ECE8E0"` to `fill="#FFFFFF"` in the SVG.
 
-## Typefaces
+## Typeface
 
-Both are free on Google Fonts, so the website and decks can match the logo.
+**Montserrat** for everything: logo, website and decks. It's free on Google Fonts.
 
-| Line | Typeface | Weight | Letter-spacing |
+| Line | Weight | Size | Letter-spacing |
 |---|---|---|---|
-| DELTA & BAY | Cormorant Garamond | 600 (SemiBold) | 0.27em |
-| FOUNDERS CLUB | Josefin Sans | 350 | 0.50em |
-| BRIDGING FRONTIERS | Josefin Sans | 380 | 0.36em |
-| SAN FRANCISCO — SHENZHEN | Josefin Sans | 380 | 0.26em |
+| DELTA & BAY | Medium (500) | 1× | 0.28em |
+| FOUNDERS CLUB | Regular (400) | 0.49× | 0.45em |
 
-All lines are set in capitals.
+Both lines are in capitals and centred on the monogram.
 
-## Typeface exploration (choosing now)
+## Parked alternative
 
-A shorter lockup is being considered: the monogram, "DELTA & BAY" and "FOUNDERS CLUB", with an optional small "sz.sf" line underneath. `explorations/typefaces/` shows it in nine typefaces. Every option uses the same curved monogram on Prussian blue with an edge glow.
+Option 6 was also a favourite: **Italiana** for "DELTA & BAY", with Jost for "FOUNDERS CLUB". It's saved as `explorations/typefaces/svg/italiana-no-szsf.svg`, in case we revisit it.
 
-![Typeface options](explorations/typefaces/sheet.jpg)
+## Explorations
 
-| # | DELTA & BAY | FOUNDERS CLUB and sz.sf | Feel |
-|---|---|---|---|
-| 1 | Cormorant Garamond 600 | Josefin Sans 400 | Old-style serif (current logo) |
-| 2 | Cinzel 500 | Cinzel 500 | Roman inscriptional capitals |
-| 3 | Bodoni Moda 500 | Bodoni Moda 500 | High-contrast Didone, fashion house |
-| 4 | Playfair Display 500 | Lato 400 | Editorial serif |
-| 5 | Marcellus | Marcellus | Flared, chiselled |
-| 6 | Italiana | Jost 400 | Hairline luxury |
-| 7 | Tenor Sans | Tenor Sans | Humanist sans, quiet and modern |
-| 8 | Jost 500 | Jost 400 | Geometric sans, Futura-like |
-| 9 | Montserrat 500 | Montserrat 400 | Wide geometric sans, tech-forward |
-
-- `explorations/typefaces/svg/<name>.svg` includes the sz.sf line, and `<name>-no-szsf.svg` leaves it out.
-- `sheet.jpg` and `sheet-with-szsf.jpg` show all nine side by side.
-- Cinzel has no lowercase, so its sz.sf comes out as small capitals.
-
-**Edge glow.** The glow is copied from the Prussian blue panel in concept 1: brighter electric blue at the top-right corner, down the right edge and along the bottom-left. It's built from six vector radial gradients fitted to that panel, so it stays sharp at any size and needs no embedded image. It matches the panel's colours to within about 1.4/255 on average.
+- `explorations/typefaces/`: the nine typefaces compared, with and without a small "sz.sf" line. `sheet.jpg` shows them side by side.
+- `explorations/v1-cormorant-full-lockup/`: the first version, in Cormorant Garamond with "BRIDGING FRONTIERS" and "SAN FRANCISCO — SHENZHEN".
 
 ## How it was made
 
-- **Monogram:** traced from the concept image. Three copies of the logo in concept 2 were aligned to a fraction of a pixel and averaged to remove compression noise, then traced into smooth Bézier curves. Against the source it matches to within about 1/16 of a source pixel. A review pass then smoothed out small ripples that only showed at very large sizes; the shape is otherwise unchanged (99.5% overlap).
-- **Clean outlines:** overlapping letter shapes are merged, so strokes, outlines and boolean operations in Figma or Illustrator work as expected.
-- **Text:** reset in the matching fonts rather than traced, because the source letters are only 10–20 px tall. Weight, size, letter-spacing and line positions were fitted to the concept, so the layout is the same.
-- **Two small corrections:**
-  - In the concept, the text block sat about 3–5 px to the right of the monogram. Every line is now centred on the monogram.
-  - Josefin Sans's "Z" has a decorative hook that the concept doesn't, so it was swapped for a plain Z.
+- **Monogram:** traced from concept 2.
+  - Three copies of the logo in the concept were aligned to a fraction of a pixel and averaged to remove compression noise, then traced into smooth Bézier curves.
+  - It matches the source to within about 1/16 of a source pixel.
+- **Edge glow:** fitted to the Prussian blue panel in concept 1.
+  - Six vector radial gradients reproduce the panel's colours to within about 1.4/255 on average.
+  - That's how it stays sharp at any size with no embedded image.
+- **Lettering:** set as outlines from the font, with kerning, and with overlapping shapes merged. Strokes, outlines and boolean operations in Figma or Illustrator work as expected.
