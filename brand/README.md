@@ -10,7 +10,7 @@ It sits on Prussian blue with the edge glow from concept 1 (`concepts/colour-con
 
 ## Files
 
-All SVGs are pure vector outlines: no fonts, no embedded images. They scale to any size and open in Figma, Illustrator, Canva or a browser. Every SVG has a matching 2048 px wide PNG in `logo/png/`.
+All SVGs are pure vector outlines: no fonts, no embedded images. They scale to any size and open in Figma, Illustrator, Canva or a browser. Every SVG has a matching PNG in `logo/png/`: 2048 px wide, except the LinkedIn logo, which is 400 × 400 and ready to upload.
 
 | File (`logo/svg/`) | Use it for |
 |---|---|
@@ -18,6 +18,7 @@ All SVGs are pure vector outlines: no fonts, no embedded images. They scale to a
 | `delta-and-bay-logo-flat.svg` | The same on plain Prussian blue, for print or anywhere the glow is too busy. |
 | `delta-and-bay-logo-ivory-transparent.svg` | Ivory logo, tightly cropped, no background. Use it on photos, the website header or dark slides. |
 | `delta-and-bay-logo-prussian-transparent.svg` | Prussian blue logo, tightly cropped, no background. Use it on white or light backgrounds. |
+| `delta-and-bay-linkedin.svg` | **LinkedIn company logo.** Monogram and "DELTA & BAY" only (no "FOUNDERS CLUB"), on the edge glow, scaled to fill the square so it still reads at LinkedIn's 48–72 px display size. Upload `png/delta-and-bay-linkedin.png`, which is LinkedIn's recommended 400 × 400. A `-flat` version on plain Prussian blue is also included. |
 | `delta-and-bay-monogram.svg` | Monogram only, on the edge glow (square). Profile pictures, app icons, favicons. |
 | `delta-and-bay-monogram-flat.svg` | Monogram on plain Prussian blue. |
 | `delta-and-bay-monogram-*-transparent.svg` | Monogram only, tightly cropped, in ivory or Prussian blue. |
